@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Classroom</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+    	main {
+    		max-width: 600px;
+    		font-size: 20px;
+    		margin: 5em auto;
+    		font-family: lato;
+    		color: rgb(0, 0, 0);
+    	}
+    	p {
+    		margin: 1.5em 0;
+    	}
+    	.beginning,
+    	.middle,
+    	.end {
+    		color: rgb(0, 0, 0);
+    		transition: color 300ms ease-in;
+    	}
+    	@media screen and (max-width: 1300px) {
+  			.beginning {
+  				color: rgb(190, 0, 0);
+  			}
+            body{
+				background: rgb(190, 0, 0);
+			}
+		}
+    	@media screen and (max-width: 1000px) {
+            .beginning {
+  				color: rgb(1, 179, 7);
+  			}
+            .middle {
+  				color: rgb(1, 179, 7);
+  			}
+
+              body{
+				background: rgb(1, 179, 7);
+			}
+		}
+    	@media screen and (max-width: 700px) {
+            .beginning {
+  				color: rgb(0, 35, 189);
+  			}
+            .middle {
+  				color: rgb(0, 35, 189);
+  			}
+             
+            .end {
+  				color: rgb(0, 35, 189);
+  			}
+
+              body{
+				background: rgb(0, 35, 189);
+			}
+		}
+    </style>
+</head>
+
+<body>
+	<main>
+	<p>
+		<b><span class="end">Describe the</span> room <span class="middle">you're <span class="beginning">sitting</span> in</span><span class="end">.</span></b>
+	</p>
+	<p>
+		<span class="end">I'm</span> in <span class="beginning">Room 206: </span>  Lewis Center   <span class="middle">of the Art Building</span>, coding, and reflecting <span class="end">as we learn about media queries</span><span class="middle">, </span> <span class="end">which help make a website</span> <span class="beginning">responsive</span><span class="middle">, </span>accessible for everyone. <span class="middle">The room is very quiet, but there is a large table <span class="beginning"> with students around it.</span> They are typing, making a "click clack" noise. <span class="beginning"> The paper on the table rustles, and is smooth to the touch</span>. The seat I am sitting on has a cushiony back. <span class="beginning">Some chairs are of a similar style, </span> while some are different -- like stools. <span class="beginning">There is wind blowing through</span></span> some of the windows -- they are open.<span class="middle"> The room is  </span> slightly chilly. <span class="beginning"> Some are</span> <span class="beginning">wearing their coats.  </span><span class="middle"> The room is brightly lit.</span>
+	</p>
+	</main>
+</body>
