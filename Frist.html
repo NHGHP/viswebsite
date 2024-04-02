@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Vivian</title>
+    <link rel="stylesheet" href="styles-Frist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+  
+    </style>
+</head>
+<body>
+    <div class="progress-bar-container">
+        <div class="progress-bar">Time Until Closing: 75%</div>
+    </div>
+    <h1>Cafe Vivian</h1>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Menu</h2>
+            <div class="menu-items">
+                <input type="checkbox" id="item1" name="item1" onchange="addToOrder('Item 1')">
+                <label for="item1">Item 1</label><br>
+                <input type="checkbox" id="item2" name="item2" onchange="addToOrder('Item 2')">
+                <label for="item2">Item 2</label><br>
+                <input type="checkbox" id="item3" name="item3" onchange="addToOrder('Item 3')">
+                <label for="item3">Item 3</label><br>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2>Your Order</h2>
+            <ul class="order-list">
+                
+            </ul>
+            <button onclick="orderForPickup()">Order for Pickup</button>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial">
+            <h3>Testimonial 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat neque eu augue ultrices, vel pharetra sapien porttitor.</p>
+        </div>
+        <div class="testimonial">
+            <h3>Testimonial 2</h3>
+            <p>Integer sit amet nibh nec mauris mattis vehicula at a leo. Donec auctor magna eu sem congue consequat.</p>
+        </div>
+        <div class="testimonial">
+            <h3>Testimonial 3</h3>
+            <p>Etiam malesuada nunc non ex euismod, ut malesuada urna tristique. Nam ut fermentum arcu.</p>
+        </div>
+    </div>
+
+    <script>
+        function addToOrder(item) {
+            var orderList = document.querySelector('.order-list');
+            var listItem = document.createElement('li');
+            listItem.textContent = item;
+            orderList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
