@@ -52,9 +52,9 @@
         }
 
         .slideshow-container {
-            max-width: 800px; /* Adjust as needed */
-            margin: 50px auto; /* Huge margin around the slideshow */
-            overflow: hidden; /* Ensure that the border does not affect the layout */
+            max-width: 800px; 
+            margin: 50px auto; 
+            overflow: hidden; 
         }
 
         #slideshow img {
@@ -192,7 +192,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // JavaScript code for time-sensitive information
-        // You can replace this with your own implementation
         // Get current date and time
         const now = new Date();
         const dayOfWeek = now.getDay();
@@ -217,19 +216,29 @@
             return minutesUntilClosing;
         }
 
-        // Function to display status and time until closing
+       // Function to display status and time until closing
         function displayStatus(locationId, hours) {
-            const statusElement = document.getElementById(locationId + '-status');
-            if (isOpen(hours)) {
-                statusElement.textContent = 'Open. Closing in ' + timeUntilClosing(hours) + ' minutes.';
+        const statusElement = document.getElementById(locationId + '-status');
+        if (isOpen(hours)) {
+            let minutesUntilClosing = timeUntilClosing(hours);
+            let remainingTime = '';
+            if (minutesUntilClosing > 60) {
+                const hoursLeft = Math.floor(minutesUntilClosing / 60);
+                const minutesLeft = minutesUntilClosing % 60;
+                remainingTime = `${hoursLeft} hour${hoursLeft > 1 ? 's' : ''} and ${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}`;
             } else {
-                if (hour < hours.start) {
-                    statusElement.textContent = 'Closed. Opens at ' + hours.start + ':00.';
-                } else {
-                    statusElement.textContent = 'Closed. Opens tomorrow at ' + hours.start + ':00.';
-                }
+                remainingTime = `${minutesUntilClosing} minute${minutesUntilClosing > 1 ? 's' : ''}`;
+            }
+            statusElement.textContent = 'Open. Closing in ' + remainingTime + '.';
+        } else {
+            if (hour < hours.start) {
+                statusElement.textContent = 'Closed. Opens at ' + hours.start + ':00.';
+            } else {
+                statusElement.textContent = 'Closed. Opens tomorrow at ' + hours.start + ':00.';
             }
         }
+    }
+
 
         // Display status for each location
         displayStatus('late-meal', lateMealHours);
@@ -238,7 +247,6 @@
         displayStatus('cafe-vivian', cafeVivianHours);
         displayStatus('witherspoon-cafe', witherspoonCafeHours);
 
-        // You can add code here to fetch and display testimonials for each location
     </script>
 </body>
 </html>
