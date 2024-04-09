@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frist Campus Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #402602; 
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            color: #fc0505; 
+            font-family: Lobster;
+
+        }
+
+        section {
+            background-color: #402602; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .location {
+            margin-bottom: 30px;
+        }
+
+        .location p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .status {
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #402602;
+            color: #2d2d2d;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #slideshow {
+            margin-bottom: 30px;
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .navbar-nav .nav-link {
+            color: orange;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+        }
+
+       
+        #cafe-vivian {
+            background-color: #f9e8d7; 
+            color: #2d2d2d; 
+        }
+
+        #cafe-vivian h2 {
+            color: #7c5a4d; 
+        }
+
+        #cafe-vivian p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+     
+        #testimonials {
+            background-color: #ffe4c4; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #testimonials h2 {
+            color: #7c5a4d; 
+        }
+
+        #testimonials .testimonial {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d3d3d3;
+        }
+
+        #testimonials .testimonial p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        #testimonials form {
+            margin-top: 20px;
+        }
+
+        #testimonials form input[type="text"],
+        #testimonials form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #testimonials form input[type="submit"] {
+            background-color: orange;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-start">
+    <a class="navbar-brand" href="#">Frist Campus Center</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="Frist_updated.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Late Meal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mail Room</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">C-store</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cafe Vivian<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Witherspoon Cafe</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <h1>Cafe Vivian</h1>
+</header>
+
+<div class="slideshow-container">
+    <div id="slideshow" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Frist Mail Room.jpg" class="d-block w-100" alt="Frist Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="Frist Food Gallery.jpg" class="d-block w-100" alt="Frist Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="cafe-vivian.jpeg" class="d-block w-100" alt="Frist Image 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<section class="location" id="cafe-vivian">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Cafe Vivian</h2>
+                <p>Hours of Operation: Monday-Friday, 11 am - 2 pm.</p>
+                <p class="status" id="cafe-vivian-status"></p>
+            </div>
+            <div class="col-md-6">
+                <h2>Time Until Closing</h2>
+                <p id="time-until-closing"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <div id="testimonial-list"></div>
+        <!-- Form submission feature -->
+        <form id="testimonial-form">
+            <h3>Share Your Experience</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <textarea id="message" name="message" placeholder="Your Testimonial" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Get current date and time
+    const now = new Date();
+    const hour = now.getHours();
+
+    // Define opening hours for Cafe Vivian
+    const cafeVivianHours = { start: 11, end: 14 };
+
+    // Check if Cafe Vivian is open
+    function isOpen(hours) {
+        return hour >= hours.start && hour < hours.end;
+    }
+
+    // Calculate time until closing
+    function timeUntilClosing(hours) {
+        const closingTime = hours.end;
+        const minutesUntilClosing = ((closingTime - hour) * 60) - now.getMinutes();
+        return minutesUntilClosing;
+    }
+
+    // Display status and time until closing
+    function displayStatusAndTimeUntilClosing() {
+        const statusElement = document.getElementById('cafe-vivian-status');
+        const timeUntilClosingElement = document.getElementById('time-until-closing');
+
+        if (isOpen(cafeVivianHours)) {
+            let minutesUntilClosing = timeUntilClosing(cafeVivianHours);
+            let remainingTime = '';
+
+            if (minutesUntilClosing > 60) {
+                const hoursLeft = Math.floor(minutesUntilClosing / 60);
+                const minutesLeft = minutesUntilClosing % 60;
+                remainingTime = `${hoursLeft} hour${hoursLeft > 1 ? 's' : ''} and ${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}`;
+            } else {
+                remainingTime = `${minutesUntilClosing} minute${minutesUntilClosing > 1 ? 's' : ''}`;
+            }
+
+            statusElement.textContent = 'Open';
+            timeUntilClosingElement.textContent = `Closing in ${remainingTime}`;
+        } else {
+            statusElement.textContent = 'Closed';
+            timeUntilClosingElement.textContent = '';
+        }
+    }
+
+    // Display status and time until closing for Cafe Vivian
+    displayStatusAndTimeUntilClosing();
+
+    document.getElementById('testimonial-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+
+        // Create testimonial element
+        const testimonialElement = document.createElement('div');
+        testimonialElement.classList.add('testimonial');
+        testimonialElement.innerHTML = `
+            <p>${message}</p>
+            <p>- ${name}</p>
+        `;
+
+        // Add testimonial to testimonial list
+        document.getElementById('testimonial-list').appendChild(testimonialElement);
+
+        // Clear form fields
+        document.getElementById('name').value = '';
+        document.getElementById('message').value = '';
+    });
+</script>
+
+</body>
+</html>
