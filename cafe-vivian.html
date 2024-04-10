@@ -6,23 +6,24 @@
     <title>Frist Campus Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #402602; 
+            background-color: #1f1201; 
         }
 
         h1, h2 {
             font-weight: 700;
             color: #fc0505; 
-            font-family: Lobster;
+            font-family: 'Courier New', Courier, monospace;
 
         }
 
         section {
-            background-color: #402602; 
+            background-color: #201201; 
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
@@ -43,7 +44,7 @@
         }
 
         header {
-            background-color: #402602;
+            background-color: #201201;
             color: #2d2d2d;
             text-align: center;
             padding: 20px 0;
@@ -65,7 +66,9 @@
         }
 
         .navbar {
-            background-color: #ffffff;
+            background-color: #653e1e;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
         }
 
         .navbar-nav .nav-link {
@@ -78,12 +81,12 @@
 
        
         #cafe-vivian {
-            background-color: #f9e8d7; 
-            color: #2d2d2d; 
+            background-color: #815d40; 
+            color:  #201201; 
         }
 
         #cafe-vivian h2 {
-            color: #7c5a4d; 
+            color:  #201201; 
         }
 
         #cafe-vivian p {
@@ -93,19 +96,19 @@
 
      
         #testimonials {
-            background-color: #ffe4c4; 
+            background-color: #edc894; 
             padding: 20px;
             border-radius: 10px;
         }
 
         #testimonials h2 {
-            color: #7c5a4d; 
+            color: #201201; 
         }
 
         #testimonials .testimonial {
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #d3d3d3;
+            border-bottom: 1px solid #201201;
         }
 
         #testimonials .testimonial p {
@@ -113,41 +116,54 @@
             margin-bottom: 5px;
         }
 
-        #testimonials form {
-            margin-top: 20px;
-        }
 
-        #testimonials form input[type="text"],
-        #testimonials form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+/* Neon glowing effect */
+@keyframes glowing {
+    0% { text-shadow: 0 0 10px #fc0505; }
+    50% { text-shadow: 0 0 20px #fc0505; }
+    100% { text-shadow: 0 0 10px #fc0505; }
+}
 
-        #testimonials form input[type="submit"] {
-            background-color: orange;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+/* Cafe Vivian heading styling */
+#cafe-heading {
+    font-size: 90px;
+    color: transparent;
+    background-image: linear-gradient(90deg, #fc0505, #fc0505);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px #fc0505; /* Static glowing effect */
+}
+
+/* Cafe Vivian heading: Cafe and Vivian */
+#cafe-heading::before {
+    content: "CAFE ";
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter; /* Decrease font weight */
+}
+
+#cafe-heading::after {
+    content: "Vivian";
+    font-family: 'Whisper', cursive; /* Change to a lighter script font */
+    font-weight: lighter; /* Decrease font weight */
+    letter-spacing: 3px;
+    font-size: 110px;
+
+}
+
 
     </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-start">
+<nav class="navbar navbar-expand-lg navbar-light justify-content-start">
     <a class="navbar-brand" href="#">Frist Campus Center</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="Frist_updated.html">Home</a>
             </li>
             <li class="nav-item">
@@ -159,7 +175,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">C-store</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-item active">
                 <a class="nav-link" href="#">Cafe Vivian<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -170,7 +186,7 @@
 </nav>
 
 <header>
-    <h1>Cafe Vivian</h1>
+    <h1 id="cafe-heading"></h1>
 </header>
 
 <div class="slideshow-container">
@@ -216,14 +232,17 @@
 <section id="testimonials">
     <div class="container">
         <h2>Testimonials</h2>
-        <div id="testimonial-list"></div>
-        <!-- Form submission feature -->
-        <form id="testimonial-form">
-            <h3>Share Your Experience</h3>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <textarea id="message" name="message" placeholder="Your Testimonial" required></textarea>
-            <input type="submit" value="Submit">
-        </form>
+        <div id="testimonial-list">
+            <div class="testimonial">
+                <p>This place is amazing!</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>Best coffee in town!</p>
+                <p>- Jane Smith</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
     </div>
 </section>
 
@@ -278,29 +297,6 @@
 
     // Display status and time until closing for Cafe Vivian
     displayStatusAndTimeUntilClosing();
-
-    document.getElementById('testimonial-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-
-        // Get form values
-        const name = document.getElementById('name').value;
-        const message = document.getElementById('message').value;
-
-        // Create testimonial element
-        const testimonialElement = document.createElement('div');
-        testimonialElement.classList.add('testimonial');
-        testimonialElement.innerHTML = `
-            <p>${message}</p>
-            <p>- ${name}</p>
-        `;
-
-        // Add testimonial to testimonial list
-        document.getElementById('testimonial-list').appendChild(testimonialElement);
-
-        // Clear form fields
-        document.getElementById('name').value = '';
-        document.getElementById('message').value = '';
-    });
 </script>
 
 </body>
