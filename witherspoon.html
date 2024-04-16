@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe-Vivian</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <title>Witherspoon Cafe</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: "Cormorant", serif;
-            font-optical-sizing: auto;
             margin: 0;
             padding: 0;
-            background-color: #201201;
+            background-color: #242164; 
         }
 
         h1, h2 {
             font-weight: 700;
-            color: #000000;
+            color: #d9d5d5; 
+            font-family: 'Sacramento', sans-serif;
         }
 
         section {
+            background-color: #242164; 
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
@@ -31,32 +30,28 @@
 
         .location {
             margin-bottom: 30px;
-            display: flex; /* Add flexbox */
-            align-items: center; /* Vertically center content */
         }
 
         .location p {
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 20px;
+            color: #d9d5d5;
         }
 
         .status {
-            font-size: 16px;
-            color:  rgb(233, 0, 0);
+            font-size: 20px;
+            color: #d9d5d5;
 
         }
 
         header {
-            background-color: #201201;
-            color: #fff;
+            background-color: #242164;
+            color: #2d2d2d;
             text-align: center;
-            padding: 50px 0 20px; /* Added more padding at the top */
+            padding: 20px 0;
         }
 
-        #slideshow {
-            margin-bottom: 30px;
-        }
-
+       
         .slideshow-container {
             max-width: 800px;
             margin: 50px auto;
@@ -69,7 +64,6 @@
         }
 
         .navbar {
-            font-family: 'Courier New', Courier, monospace;
             border-radius: 10px; /* Add border radius */
             margin-bottom: 20px; /* Add margin at the bottom */
             margin-top: 20px; /* Add margin at the top */
@@ -79,14 +73,14 @@
         }
 
         .navbar-nav .nav-link {
-            color: rgb(233, 0, 0) !important;
+            color: #d9d5d5 !important;          
             font-size: 20px; /* Increase font size */
             font-weight: 400; /* Make font weight heavier */
         }
 
 
         .navbar-nav .nav-link:hover {
-            color: orange !important;
+            color: #06a1b6 !important;
         }
 
         .location img {
@@ -98,89 +92,59 @@
             max-height: 80px; /* Increase size of logo */
             margin-right: 10px; /* Add space between the logo and text */
         }
-           
+       
         #cafe-vivian {
-            color:  rgb(233, 0, 0);
-            font-family: 'Courier New', Courier, monospace;
-
-            
+            background-color: #242164; 
+            color: #d9d5d5; 
         }
 
         #cafe-vivian h2 {
-            color:  rgb(233, 0, 0); 
-            
+            color: #d9d5d5; 
+
         }
 
         #cafe-vivian p {
             font-size: 20px;
-
+            line-height: 1.6;
         }
+
      
         #testimonials {
+            background-color: #242164; 
             padding: 20px;
             border-radius: 10px;
-            font-family: 'Courier New', Courier, monospace;
-
-
         }
 
         #testimonials h2 {
-            color: rgb(233, 0, 0); 
+            color: #d9d5d5; 
+
         }
 
         #testimonials .testimonial {
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgb(233, 0, 0);
+            border-bottom: 2px solid #000117; 
+;
         }
 
         #testimonials .testimonial p {
-            margin-bottom: 5px;
             font-size: 20px;
-            color:rgb(233, 0, 0);
+            margin-bottom: 5px;
+            color: #d9d5d5; 
         }
 
-
-        /* Neon glowing effect */
-        @keyframes glowing {
-            0% { text-shadow: 0 0 10px #fc0505; }
-            50% { text-shadow: 0 0 20px #fc0505; }
-            100% { text-shadow: 0 0 10px #fc0505; }
-        }
-
-        /* Cafe Vivian heading styling */
-        #cafe-heading {
+        .special-header{
             font-size: 90px;
-            color: transparent;
-            background-image: linear-gradient(90deg, #fc0505, #fc0505);
-            -webkit-background-clip: text;
-            background-clip: text;
-            text-shadow: 0 0 10px #fc0505; /* Static glowing effect */
         }
 
-        /* Cafe Vivian heading: Cafe and Vivian */
-        #cafe-heading::before {
-            content: "CAFE ";
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: lighter; /* Decrease font weight */
-        }
-
-        #cafe-heading::after {
-            content: "Vivian";
-            font-family: 'Whisper', cursive; /* Change to a lighter script font */
-            font-weight: lighter; /* Decrease font weight */
-            letter-spacing: 3px;
-            font-size: 110px;
-
+        .navbar-brand{
+            color: #d9d5d5 !important;
         }
 
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(233, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22m-7 8h7'/%3e%3c/svg%3e") !important;
+            background-color: #e5e5e5; /* Set hamburger icon color to white */
+            border-radius: 3px;
         }
-
-      
-
-
 
     </style>
 </head>
@@ -188,14 +152,14 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light justify-content-between"> <!-- Changed justify-content-start to justify-content-between -->
-    <a class="navbar-brand" href="Frist_updated.html"><img src="cafe_vivian_logo.png" alt="Princeton Logo"></a> <!-- Added the Princeton logo -->
+    <a class="navbar-brand" href="#"><img src="witherspoon-logo.png" alt="Witherspoon Logo"></a> <!-- Added the Princeton logo -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="Frist_updated.html">Home</span></a>
+                <a class="nav-link" href="Frist_updated.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Late_Meal.html">Late Meal</a>
@@ -210,28 +174,27 @@
                 <a class="nav-link" href="cafe-vivian.html">Cafe Vivian</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="witherspoon.html">Witherspoon Cafe</a>
+                <a class="nav-link" href="witherspoon.html">Witherspoon Cafe<span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
 </nav>
 
-
 <header>
-    <h1 id="cafe-heading"></h1>
+    <h1 class="special-header"> Witherspoon Cafe</h1>
 </header>
 
 <div class="slideshow-container">
-    <img src="cafe-vivian-photo.jpg" class="d-block w-100" alt="Mail Room">
- </div>
+       <img src="witherspoon-photo.jpeg" class="d-block w-100" alt="Witherspoon Cafe">
+    </div>
 </div>
 
 <section class="location" id="cafe-vivian">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Cafe Vivian</h2>
-                <p>Hours of Operation: Monday-Friday, 11 am - 2 pm.</p>
+                <h2>Witherspoon Cafe</h2>
+                <p>Hours of Operation: Monday-Friday, 8 am - 6 pm.</p>
                 <p class="status" id="cafe-vivian-status"></p>
             </div>
             <div class="col-md-6">
@@ -247,14 +210,13 @@
         <h2>Testimonials</h2>
         <div id="testimonial-list">
             <div class="testimonial">
-                <p>Cafe Vivian has such a unique vibe compared to the rest of Frist -- great music, food, and service!</p>
-                <p>- Matt</p>
+                <p>I love to get my morning coffee from this place! The baristas are warm and welcoming, and their iced latte is delicious!</p>
+                <p>- Sally Smith</p>
             </div>
             <div class="testimonial">
-                <p>A hidden gem on campus -- the weekly specials are delicious!</p>
-                <p>- Jack</p>
+                <p>Best coffee on campus! And quick service is a plus.</p>
+                <p>- Jason Jones</p>
             </div>
-            <!-- Add more testimonials as needed -->
         </div>
     </div>
 </section>
@@ -264,14 +226,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-    // Get current date and time
-    const now = new Date();
+  // Get current date and time
+  const now = new Date();
     const hour = now.getHours();
 
-    // Define opening hours for Cafe Vivian
-    const cafeVivianHours = { start: 11, end: 14 };
+    // Define opening hours for Witherspoon Cafe
+    const witherspoonHours = { start: 8, end: 18 };
 
-    // Check if Cafe Vivian is open
+    // Check if Witherspoon Cafe is open
     function isOpen(hours) {
         return hour >= hours.start && hour < hours.end;
     }
@@ -288,8 +250,8 @@
         const statusElement = document.getElementById('cafe-vivian-status');
         const timeUntilClosingElement = document.getElementById('time-until-closing');
 
-        if (isOpen(cafeVivianHours)) {
-            let minutesUntilClosing = timeUntilClosing(cafeVivianHours);
+        if (isOpen(witherspoonHours)) {
+            let minutesUntilClosing = timeUntilClosing(witherspoonHours);
             let remainingTime = '';
 
             if (minutesUntilClosing > 60) {
@@ -308,10 +270,9 @@
         }
     }
 
-    // Display status and time until closing for Cafe Vivian
+    // Display status and time until closing for Witherspoon Cafe
     displayStatusAndTimeUntilClosing();
 </script>
 
 </body>
 </html>
-

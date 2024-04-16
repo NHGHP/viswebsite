@@ -6,12 +6,15 @@
     <title>Frist Campus Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: "Cormorant", serif;
+            font-optical-sizing: auto;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f8f6f5;
         }
 
         h1, h2 {
@@ -20,15 +23,16 @@
         }
 
         section {
-            background-color: #ffffff;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .location {
             margin-bottom: 30px;
+            border-bottom: 1px solid black; /* Add a straight line black break */
+            display: flex; /* Add flexbox */
+            align-items: center; /* Vertically center content */
         }
 
         .location p {
@@ -41,10 +45,10 @@
         }
 
         header {
-            background-color: #ffffff;
+            background-color: #f8f6f5;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 50px 0 20px; /* Added more padding at the top */
         }
 
         #slideshow {
@@ -63,15 +67,45 @@
         }
 
         .navbar {
-            background-color: #fff;
+            border-radius: 10px; /* Add border radius */
+            margin-bottom: 20px; /* Add margin at the bottom */
+            margin-top: 20px; /* Add margin at the top */
+            padding: 8px 20px; /* Adjust padding */
+            margin-left: 20px; /* Add margin to the left */
+            margin-right: 20px; /* Add margin to the right */
         }
 
         .navbar-nav .nav-link {
             color: orange;
+            font-size: 20px; /* Increase font size */
+            font-weight: 400; /* Make font weight heavier */
         }
+
 
         .navbar-nav .nav-link:hover {
             color: black;
+        }
+
+        .location img {
+            max-width: 80px;
+            margin-right: 20px;
+        }
+
+        .navbar-brand img { /* CSS for the Princeton logo */
+            max-height: 80px; /* Increase size of logo */
+            margin-right: 10px; /* Add space between the logo and text */
+        }
+
+        .location-info {
+            margin-left: 20px;
+        }
+
+        .hours-operation {
+            font-weight: bold;
+        }
+
+        .time-until-closing {
+            font-style: italic;
         }
 
     </style>
@@ -79,8 +113,8 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light justify-content-start">
-    <a class="navbar-brand" href="#">Frist Campus Center</a>
+<nav class="navbar navbar-expand-lg navbar-light justify-content-between"> <!-- Changed justify-content-start to justify-content-between -->
+    <a class="navbar-brand" href="#"><img src="princeton-logo.png" alt="Princeton Logo"></a> <!-- Added the Princeton logo -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -90,19 +124,19 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Late Meal</a>
+                <a class="nav-link" href="Late_Meal.html">Late Meal</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Mail Room</a>
+                <a class="nav-link" href="mail-room.html">Mail Room</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">C-store</a>
+                <a class="nav-link" href="c-store.html">C-store</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="cafe-vivian.html">Cafe Vivian</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Witherspoon Cafe</a>
+                <a class="nav-link" href="witherspoon.html">Witherspoon Cafe</a>
             </li>
         </ul>
     </div>
@@ -138,59 +172,62 @@
     </div>
 </div>
 
-<!-- Filter -->
-<div class="container mb-4">
-    <label for="sorting-filter">Filter by Busyness (Most Busy to Least Busy)</label>
-    <select id="sorting-filter" class="form-control">
-        <option value="8-11am">8-11 am</option>
-        <option value="11-4pm">11-4 pm</option>
-        <option value="4-8:30pm">4-8:30 pm</option>
-        <option value="8:30-10pm">8:30-10 pm</option>
-        <option value="11pm-8am">11 pm - 8 am</option>
-    </select>
-</div>
-
 <!-- Locations -->
 <section class="location" id="late-meal">
-    <h2>Late Meal</h2>
-    <p>Hours of Operation: Monday-Thursday, 11 a.m - 4 p.m & 8:30-10 p.m.</p>
-    <p class="status" id="late-meal-status"></p>
+    <img src="late-meal-logo.png" alt="Late Meal Logo">
+    <div class="location-info">
+        <h2>Late Meal</h2>
+        <p class="hours-operation">Hours of Operation: Monday-Thursday, 11 a.m - 4 p.m & 8:30-10 p.m.</p>
+        <p class="status time-until-closing" id="late-meal-status"></p>
+    </div>
     <div id="late-meal-testimonials">
         <!-- Testimonials preview here -->
     </div>
 </section>
 
 <section class="location" id="mail-room">
-    <h2>Mail Room</h2>
-    <p>Hours of Operation: Monday-Friday, 10 a.m - 6 p.m.</p>
-    <p class="status" id="mail-room-status"></p>
+    <img src="mail-room-logo.png" alt="Mail Room Logo">
+    <div class="location-info">
+        <h2>Mail Room</h2>
+        <p class="hours-operation">Hours of Operation: Monday-Friday, 10 a.m - 6 p.m.</p>
+        <p class="status time-until-closing" id="mail-room-status"></p>
+    </div>
     <div id="mail-room-testimonials">
         <!-- Testimonials preview here -->
     </div>
 </section>
 
 <section class="location" id="c-store">
-    <h2>C-store</h2>
-    <p>Hours of Operation: Monday-Sunday, 11 am - 11 pm.</p>
-    <p class="status" id="c-store-status"></p>
+    <img src="c-store-logo.png" alt="C-store Logo">
+    <div class="location-info">
+        <h2>C-store</h2>
+        <p class="hours-operation">Hours of Operation: Monday-Sunday, 11 am - 11 pm.</p>
+        <p class="status time-until-closing" id="c-store-status"></p>
+    </div>
     <div id="c-store-testimonials">
         <!-- Testimonials preview here -->
     </div>
 </section>
 
 <section class="location" id="cafe-vivian">
-    <h2>Cafe Vivian</h2>
-    <p>Hours of Operation: Monday-Friday, 11 am - 2 pm.</p>
-    <p class="status" id="cafe-vivian-status"></p>
+    <img src="cafe_vivian_logo.png" alt="Cafe Vivian Logo">
+    <div class="location-info">
+        <h2>Cafe Vivian</h2>
+        <p class="hours-operation">Hours of Operation: Monday-Friday, 11 am - 2 pm.</p>
+        <p class="status time-until-closing" id="cafe-vivian-status"></p>
+    </div>
     <div id="cafe-vivian-testimonials">
         <!-- Testimonials preview here -->
     </div>
 </section>
 
 <section class="location" id="witherspoon-cafe">
-    <h2>Witherspoon Cafe</h2>
-    <p>Hours of Operation: Monday-Friday, 8 am - 6 pm.</p>
-    <p class="status" id="witherspoon-cafe-status"></p>
+    <img src="witherspoon-logo.png" alt="Witherspoon Cafe Logo">
+    <div class="location-info">
+        <h2>Witherspoon Cafe</h2>
+        <p class="hours-operation">Hours of Operation: Monday-Friday, 8 am - 6 pm.</p>
+        <p class="status time-until-closing" id="witherspoon-cafe-status"></p>
+    </div>
     <div id="witherspoon-cafe-testimonials">
         <!-- Testimonials preview here -->
     </div>
@@ -225,28 +262,32 @@
         return minutesUntilClosing;
     }
 
-    // Function to display status and time until closing
-    function displayStatus(locationId, hours) {
-        const statusElement = document.getElementById(locationId + '-status');
-        if (isOpen(hours)) {
-            let minutesUntilClosing = timeUntilClosing(hours);
-            let remainingTime = '';
-            if (minutesUntilClosing > 60) {
-                const hoursLeft = Math.floor(minutesUntilClosing / 60);
-                const minutesLeft = minutesUntilClosing % 60;
-                remainingTime = `${hoursLeft} hour${hoursLeft > 1 ? 's' : ''} and ${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}`;
-            } else {
-                remainingTime = `${minutesUntilClosing} minute${minutesUntilClosing > 1 ? 's' : ''}`;
-            }
-            statusElement.textContent = 'Open. Closing in ' + remainingTime + '.';
+// Function to display status and time until closing
+function displayStatus(locationId, hours) {
+    const statusElement = document.getElementById(locationId + '-status');
+    if (isOpen(hours)) {
+        let minutesUntilClosing = timeUntilClosing(hours);
+        let remainingTime = '';
+        if (minutesUntilClosing > 60) {
+            const hoursLeft = Math.floor(minutesUntilClosing / 60);
+            const minutesLeft = minutesUntilClosing % 60;
+            remainingTime = `${hoursLeft} hour${hoursLeft > 1 ? 's' : ''} and ${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}`;
         } else {
-            if (hour < hours.start) {
-                statusElement.textContent = 'Closed. Opens at ' + hours.start + ':00.';
-            } else {
-                statusElement.textContent = 'Closed. Opens tomorrow at ' + hours.start + ':00.';
-            }
+            remainingTime = `${minutesUntilClosing} minute${minutesUntilClosing > 1 ? 's' : ''}`;
         }
+        statusElement.innerHTML = '<span style="background-color: rgba(144, 238, 144, 0.5); padding: 2px; border-radius: 4px;">Open</span>. Closing in ' + remainingTime + '.';
+    } else {
+        if (hour < hours.start) {
+            statusElement.textContent = 'Closed. Opens at ' + hours.start + ':00.';
+        } else {
+            statusElement.textContent = 'Closed. Opens tomorrow at ' + hours.start + ':00.';
+        }
+        statusElement.innerHTML = '<span style="background-color: rgba(255, 160, 122, 0.5); padding: 2px; border-radius: 4px;">Closed</span>' + statusElement.textContent.substring(6);
     }
+}
+
+
+
 
     // Display status for each location
     displayStatus('late-meal', lateMealHours);
@@ -296,28 +337,28 @@
     // Get opening hour of a module
     function getOpeningHour(locationId) {
         switch (locationId) {
-            case "witherspoon-cafe":
-                return 8;
-            case "mail-room":
-                return 10;
-            case "c-store":
-                return 11;
-            case "late-meal":
-                return 20.5; // 8:30 pm
-            case "cafe-vivian":
-                return 11;
+            case 'late-meal':
+                return lateMealHours.start;
+            case 'mail-room':
+                return mailRoomHours.start;
+            case 'c-store':
+                return cStoreHours.start;
+            case 'cafe-vivian':
+                return cafeVivianHours.start;
+            case 'witherspoon-cafe':
+                return witherspoonCafeHours.start;
             default:
                 return 0;
         }
     }
 
-    // Event listener for filter change
-    document.getElementById('sorting-filter').addEventListener('change', function () {
+    // Sort modules on page load
+    sortModules(document.getElementById('sorting-filter').value);
+
+    // Listen for changes in the filter selection
+    document.getElementById('sorting-filter').addEventListener('change', function() {
         sortModules(this.value);
     });
-
-    // Initial sorting based on default value
-    sortModules(document.getElementById('sorting-filter').value);
 </script>
 
 </body>
