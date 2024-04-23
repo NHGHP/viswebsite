@@ -65,7 +65,7 @@
 
         #slideshow img {
             width: 100%;
-            height: auto;
+            height: 200%;
         }
 
 
@@ -179,9 +179,12 @@
             background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(233, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22m-7 8h7'/%3e%3c/svg%3e") !important;
         }
 
-      
-
-
+         /* Mobile-specific adjustments */
+         @media (max-width: 768px) {
+                .location .col-md-6 {
+                    margin-bottom: 20px; /* Adds space at the bottom of each column on mobile */
+                }
+            }
 
     </style>
 </head>
@@ -222,22 +225,25 @@
     <h1 id="cafe-heading"></h1>
 </header>
 
+<!--
 <div class="slideshow-container">
-    <img src="cafe-vivian-inside.jpg" class="d-block w-100" alt="Cafe Vivian">
+    <img src="cafe-vivian.jpeg" class="d-block w-100" alt="Cafe Vivian">
  </div>
 </div>
+-->
+
 
 <section class="location" id="cafe-vivian">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Cafe Vivian</h2>
-                <p>Hours of Operation: Monday-Friday, 11 am - 2 pm.</p>
-                <p class="status" id="cafe-vivian-status"></p>
+                <h2>Hours of Operation</h2>
+                <p>Monday-Friday, 11 am - 2 pm.</p>
             </div>
             <div class="col-md-6">
                 <h2>Time Until Closing</h2>
                 <p id="time-until-closing"></p>
+                <p class="status" id="cafe-vivian-status"></p>
             </div>
         </div>
     </div>
