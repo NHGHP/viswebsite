@@ -143,6 +143,13 @@
             color: #955624 !important;
         }
 
+         /* Mobile-specific adjustments */
+         @media (max-width: 768px) {
+                .location .col-md-6 {
+                    margin-bottom: 20px; /* Adds space at the bottom of each column on mobile */
+                }
+            }
+
     </style>
 </head>
 <body>
@@ -181,21 +188,24 @@
     <h1 class="special-header"> Late Meal</h1>
 </header>
 
+<!--
 <div class="slideshow-container">
-    <img src="late-meal-photo.jpg" class="d-block w-100" alt="Late Meal Photo">
+    <img src="late-meal-photo-updated.jpg" class="d-block w-100" alt="Late Meal Photo">
 </div>
+-->
+
 
 <section class="location" id="late-meal">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Late Meal</h2>
-                <p>Hours of Operation: Monday-Thursday, 11 a.m - 4 p.m & 8:30-10 p.m</p>
-                <p class="status" id="late-meal-status"></p>
+                <h2>Hours of Operation</h2>
+                <p>Monday-Thursday, 11 a.m - 4 p.m & 8:30-10 p.m</p>
             </div>
             <div class="col-md-6">
                 <h2>Time Until Closing</h2>
                 <p id="time-until-closing"></p>
+                <p class="status" id="late-meal-status"></p>
             </div>
         </div>
     </div>

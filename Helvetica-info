@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noreen Hosny</title>
+        <meta charset="utf-8" />
+        <meta name ="viewport" content="width=device-width, user-scalable=no" />
+        <style>
+             /* You can put any styles here */
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="eye drawing.jpg" width="550" alt="One of my earlier sketches of an eye">
+        <p>Noreen welcomes you to her class homepage.</p>
+        <hr>
+        <h2> Exercises</h2>
+        <a href="freestyle.html">HTML Freestyle</a>
+        <a href="writing.html">Writing</a>
+        <h2>Inspiration</h2>
+        <h4>My furry friend Obi</h4>
+        <img src="obi.jpg" width="150" alt="Picture of Obi smiling">
+    </body>
+</html>

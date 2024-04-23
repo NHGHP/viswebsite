@@ -145,6 +145,13 @@
             border-radius: 3px;
         }
 
+        /* Mobile-specific adjustments */
+            @media (max-width: 768px) {
+                .location .col-md-6 {
+                    margin-bottom: 20px; /* Adds space at the bottom of each column on mobile */
+                }
+            }
+
     </style>
 </head>
 <body>
@@ -183,22 +190,24 @@
     <h1 class="special-header"> Witherspoon Cafe</h1>
 </header>
 
+<!--
 <div class="slideshow-container">
-       <img src="witherspoon-photo.jpeg" class="d-block w-100" alt="Witherspoon Cafe">
+       <img src="witherspoon_cafe.jpeg" class="d-block w-100" alt="Witherspoon Cafe">
     </div>
 </div>
+-->
 
 <section class="location" id="cafe-vivian">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Witherspoon Cafe</h2>
-                <p>Hours of Operation: Monday-Friday, 8 am - 6 pm.</p>
-                <p class="status" id="cafe-vivian-status"></p>
+                <h2>Hours of Operation</h2>
+                <p> Monday-Friday, 8 am - 6 pm.</p>
             </div>
             <div class="col-md-6">
                 <h2>Time Until Closing</h2>
                 <p id="time-until-closing"></p>
+                <p class="status" id="cafe-vivian-status"></p>
             </div>
         </div>
     </div>

@@ -148,6 +148,13 @@
             color: #955624 !important;
         }
 
+         /* Mobile-specific adjustments */
+         @media (max-width: 768px) {
+                .location .col-md-6 {
+                    margin-bottom: 20px; /* Adds space at the bottom of each column on mobile */
+                }
+            }
+
     </style>
 </head>
 <body>
@@ -182,26 +189,30 @@
     </div>
 </nav>
 
+
 <header>
     <h1 class="special-header"> C-Store</h1>
 </header>
 
+<!--
 <div class="slideshow-container">
-    <img src="c-store-image.jpeg" class="d-block w-100" alt="Mail Room">
+    <img src="c-store-image-updated.jpg" class="d-block w-100" alt="Mail Room">
  </div>
 </div>
+-->
+
 
 <section class="location" id="cafe-vivian">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>C-Store</h2>
-                <p>Hours of Operation: Monday-Sunday, 11 am - 11 pm.</p>
-                <p class="status" id="cafe-vivian-status"></p>
+                <h2>Hours of Operation: </h2>
+                <p>Monday-Sunday, 11 am - 11 pm.</p>
             </div>
             <div class="col-md-6">
                 <h2>Time Until Closing</h2>
                 <p id="time-until-closing"></p>
+                <p class="status" id="cafe-vivian-status"></p>
             </div>
         </div>
     </div>

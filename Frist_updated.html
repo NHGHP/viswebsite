@@ -150,10 +150,10 @@
     <div id="slideshow" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Frist Mail Room.jpg" class="d-block w-100" alt="Frist Image 1">
+                <img src="mail-room-photo-new.jpg" class="d-block w-100" alt="Frist Image 1">
             </div>
             <div class="carousel-item">
-                <img src="Frist Food Gallery.jpg" class="d-block w-100" alt="Frist Image 2">
+                <img src="late-meal-photo.jpg" class="d-block w-100" alt="Frist Image 2">
             </div>
             <div class="carousel-item">
                 <img src="cafe-vivian.jpeg" class="d-block w-100" alt="Frist Image 3">
@@ -284,9 +284,6 @@ function displayStatus(locationId, hours) {
     }
 }
 
-
-
-
     // Display status for each location
     displayStatus('late-meal', lateMealHours);
     displayStatus('mail-room', mailRoomHours);
@@ -319,18 +316,6 @@ function displayStatus(locationId, hours) {
         }
     }
 
-    // Function to sort modules by time
-    function sortModulesByTime(startHour, endHour) {
-        const modules = document.querySelectorAll('.location');
-        const sortedModules = Array.from(modules).sort((a, b) => {
-            const aHour = getOpeningHour(a.id);
-            const bHour = getOpeningHour(b.id);
-            return aHour >= startHour && aHour < endHour ? -1 : bHour >= startHour && bHour < endHour ? 1 : 0;
-        });
-        const parent = document.querySelector('body');
-        modules.forEach(module => parent.removeChild(module));
-        sortedModules.forEach(module => parent.appendChild(module));
-    }
 
     // Get opening hour of a module
     function getOpeningHour(locationId) {
@@ -349,14 +334,7 @@ function displayStatus(locationId, hours) {
                 return 0;
         }
     }
-
-    // Sort modules on page load
-    sortModules(document.getElementById('sorting-filter').value);
-
-    // Listen for changes in the filter selection
-    document.getElementById('sorting-filter').addEventListener('change', function() {
-        sortModules(this.value);
-    });
+    
 </script>
 
 </body>

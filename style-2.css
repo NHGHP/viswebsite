@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration: none;
+}
+
+main {
+	max-width: 600px;
+	font-size: 20px;
+	margin: 5em auto;
+	font-family: Arial, Helvetica, sans-serif;
+	color: navy;
+}
+p {
+	margin: 1.5em 0;
+}
+.beginning,
+.middle,
+.end {
+	color: navy;
+	transition: color 300ms ease-in;
+}
+@media screen and (max-width: 1300px) {
+	  .beginning {
+		  color: white;
+	  }
+}
+@media screen and (max-width: 1000px) {
+	  .middle {
+		  color: white;
+	  }
+}
+@media screen and (max-width: 700px) {
+	  .end {
+		  color: white;
+	  }
+}
+
+nav{
+    height: 80px;
+    background: #2c3e50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav img {
+    width:70px;
+    position:absolute;
+    top: 17px;
+    left:12%;
+}
+
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left:0;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .2s linear;
+}
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn, 
+label #cancel{
+    color: white;
+    font-size:30px;
+    float:right;
+    line-height:80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+
+#check{
+    display:none;
+}
+    
+@media(max-width:1118px){
+    nav img {
+        left: 8%;
+
+    }
+    
+}
+
+
+
+@media(max-width:900){
+     
+label #btn{
+    display: block;
+}
+
+
+   nav ul li a{
+    font-size:20px;
+
+   }
+
+   #check:checked ~ul{
+    left:0;
+
+   }
+
+   #check:checked ~ label #btn{
+    display:none;    
+   }
+
+
+   #check:checked ~ label #cancel{
+    display:block;    
+   }
+
+   ul{
+    position: fixed;
+    width:100%;
+    height: 100vh;
+    background: navy;
+    top: 80px;
+    left:0;
+    text-align: center;
+
+   }
+
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30 px;
+
+  }
+    
+}
